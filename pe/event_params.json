@@ -1,0 +1,419 @@
+{
+ "GW150914": {
+  "gwosc_name": "GW150914_095045",
+  "pe_file": "IGWN-GWTC2p1-v2-GW150914_095045_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 2.216116171456804,
+  "dec_maxL": -1.2259035208296045,
+  "median_ref_time": 1126259462.4239063,
+  "peak_offset_s": -0.000732421875,
+  "trigtime_refdet": 1126259462.423174,
+  "Mf_det_median": 67.22131064519903,
+  "Mf_det_90upper": 70.39604939543791,
+  "af_median": 0.6825177759916619,
+  "tM_s": 0.0003310979570715093,
+  "fix_t": 0.003310979570715093,
+  "redshift_median": 0.09629727879431157
+ },
+ "GW170104": {
+  "gwosc_name": "GW170104_101158",
+  "pe_file": "IGWN-GWTC2p1-v2-GW170104_101158_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 2.006041132513211,
+  "dec_maxL": 0.19265105363934976,
+  "median_ref_time": 1167559936.5938168,
+  "peak_offset_s": -0.00439453125,
+  "trigtime_refdet": 1167559936.5894222,
+  "Mf_det_median": 57.85356910290511,
+  "Mf_det_90upper": 61.78693775471429,
+  "af_median": 0.668121652461668,
+  "tM_s": 0.00028495723090509763,
+  "fix_t": 0.002849572309050976,
+  "redshift_median": 0.21127173722689813
+ },
+ "GW170608": {
+  "gwosc_name": "GW170608_020116",
+  "pe_file": "IGWN-GWTC2p1-v2-GW170608_020116_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 2.204609725687817,
+  "dec_maxL": 0.5560302316781531,
+  "median_ref_time": 1180922494.4841614,
+  "peak_offset_s": -0.000732421875,
+  "trigtime_refdet": 1180922494.483429,
+  "Mf_det_median": 18.91720479217942,
+  "Mf_det_90upper": 21.98707840790502,
+  "af_median": 0.6955143296980165,
+  "tM_s": 9.317652095855572e-05,
+  "fix_t": 0.0009317652095855571,
+  "redshift_median": 0.0707289335315816
+ },
+ "GW170729": {
+  "gwosc_name": "GW170729_185629",
+  "pe_file": "IGWN-GWTC2p1-v2-GW170729_185629_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 5.839079705518891,
+  "dec_maxL": -1.2414775224856607,
+  "median_ref_time": 1185389807.316221,
+  "peak_offset_s": -0.01123046875,
+  "trigtime_refdet": 1185389807.3049905,
+  "Mf_det_median": 114.57706255447323,
+  "Mf_det_90upper": 131.71395505523054,
+  "af_median": 0.7754391293888838,
+  "tM_s": 0.0005643482844193851,
+  "fix_t": 0.005643482844193851,
+  "redshift_median": 0.4266913192051298
+ },
+ "GW170818": {
+  "gwosc_name": "GW170818_022509",
+  "pe_file": "IGWN-GWTC2p1-v2-GW170818_022509_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 5.953186823418413,
+  "dec_maxL": 0.39914476795343523,
+  "median_ref_time": 1187058327.0817916,
+  "peak_offset_s": -0.0009765625,
+  "trigtime_refdet": 1187058327.080815,
+  "Mf_det_median": 72.83591188320719,
+  "Mf_det_90upper": 78.3985643560399,
+  "af_median": 0.6927597671278084,
+  "tM_s": 0.00035875262464393396,
+  "fix_t": 0.0035875262464393396,
+  "redshift_median": 0.22197333336927572
+ },
+ "GW170823": {
+  "gwosc_name": "GW170823_131358",
+  "pe_file": "IGWN-GWTC2p1-v2-GW170823_131358_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 4.518897383516602,
+  "dec_maxL": -0.6548443703714435,
+  "median_ref_time": 1187529256.511088,
+  "peak_offset_s": 0.00048828125,
+  "trigtime_refdet": 1187529256.5115762,
+  "Mf_det_median": 86.52915954174478,
+  "Mf_det_90upper": 96.93594961075969,
+  "af_median": 0.7125123745989033,
+  "tM_s": 0.0004261985920298708,
+  "fix_t": 0.004261985920298708,
+  "redshift_median": 0.35745168518083426
+ },
+ "GW190408_181802": {
+  "gwosc_name": "GW190408_181802",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190408_181802_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 6.121886412827145,
+  "dec_maxL": 0.9284342297563164,
+  "median_ref_time": 1238782700.281106,
+  "peak_offset_s": -0.001953125,
+  "trigtime_refdet": 1238782700.2791529,
+  "Mf_det_median": 53.35355802325456,
+  "Mf_det_90upper": 56.46672140491809,
+  "af_median": 0.6690845899809581,
+  "tM_s": 0.0002627924670679934,
+  "fix_t": 0.002627924670679934,
+  "redshift_median": 0.28578110539957163
+ },
+ "GW190512_180714": {
+  "gwosc_name": "GW190512_180714",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190512_180714_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 4.364991941827661,
+  "dec_maxL": -0.45455363208795596,
+  "median_ref_time": 1241719652.4146073,
+  "peak_offset_s": 0.00048828125,
+  "trigtime_refdet": 1241719652.4150956,
+  "Mf_det_median": 43.801797773296535,
+  "Mf_det_90upper": 49.05272377780602,
+  "af_median": 0.6510061616646653,
+  "tM_s": 0.00021574535842278547,
+  "fix_t": 0.0021574535842278546,
+  "redshift_median": 0.2782675647113578
+ },
+ "GW190519_153544": {
+  "gwosc_name": "GW190519_153544",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190519_153544_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 3.22172031217373,
+  "dec_maxL": -0.33697485292626883,
+  "median_ref_time": 1242315362.3806527,
+  "peak_offset_s": 0.001708984375,
+  "trigtime_refdet": 1242315362.3823617,
+  "Mf_det_median": 143.62188847917201,
+  "Mf_det_90upper": 156.7832549131634,
+  "af_median": 0.7846563879907156,
+  "tM_s": 0.0007074083115873053,
+  "fix_t": 0.007074083115873053,
+  "redshift_median": 0.4528984187405134
+ },
+ "GW190521": {
+  "gwosc_name": "GW190521_030229",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190521_030229_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 0.0219916200354362,
+  "dec_maxL": -0.8982817511615009,
+  "median_ref_time": 1242442967.4324625,
+  "peak_offset_s": -0.007568359375,
+  "trigtime_refdet": 1242442967.424894,
+  "Mf_det_median": 234.05311579736957,
+  "Mf_det_90upper": 284.14253117649736,
+  "af_median": 0.6163284446524967,
+  "tM_s": 0.0011528265031271769,
+  "fix_t": 0.011528265031271771,
+  "redshift_median": 0.5560437237205532
+ },
+ "GW190521_074359": {
+  "gwosc_name": "GW190521_074359",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190521_074359_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 4.49365434577939,
+  "dec_maxL": -0.10188702671301497,
+  "median_ref_time": 1242459857.4607458,
+  "peak_offset_s": -0.000244140625,
+  "trigtime_refdet": 1242459857.4605017,
+  "Mf_det_median": 86.92891878521716,
+  "Mf_det_90upper": 91.07834040115081,
+  "af_median": 0.7012053320819981,
+  "tM_s": 0.00042816760256483,
+  "fix_t": 0.004281676025648299,
+  "redshift_median": 0.17978366311501337
+ },
+ "GW190602_175927": {
+  "gwosc_name": "GW190602_175927",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190602_175927_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 1.259696203309467,
+  "dec_maxL": -0.14980468423150195,
+  "median_ref_time": 1243533585.086608,
+  "peak_offset_s": 0.003662109375,
+  "trigtime_refdet": 1243533585.09027,
+  "Mf_det_median": 165.91731203599628,
+  "Mf_det_90upper": 188.87982555733112,
+  "af_median": 0.7166476696206002,
+  "tM_s": 0.000817224218490271,
+  "fix_t": 0.00817224218490271,
+  "redshift_median": 0.4894924996629116
+ },
+ "GW190630_185205": {
+  "gwosc_name": "GW190630_185205",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190630_185205_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "L1"
+  ],
+  "ref_det": "L1",
+  "ra_maxL": 2.7864909342828312,
+  "dec_maxL": 0.9346686795723201,
+  "median_ref_time": 1245955943.1750674,
+  "peak_offset_s": 0.0009765625,
+  "trigtime_refdet": 1245955943.176044,
+  "Mf_det_median": 66.08211449427883,
+  "Mf_det_90upper": 70.4276703181085,
+  "af_median": 0.702329446431044,
+  "tM_s": 0.0003254868567425641,
+  "fix_t": 0.003254868567425641,
+  "redshift_median": 0.1682851579103019
+ },
+ "GW190706_222641": {
+  "gwosc_name": "GW190706_222641",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190706_222641_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 6.09906416091691,
+  "dec_maxL": -0.8811582499177808,
+  "median_ref_time": 1246487219.3190708,
+  "peak_offset_s": 0.003173828125,
+  "trigtime_refdet": 1246487219.3222446,
+  "Mf_det_median": 172.80463877613425,
+  "Mf_det_90upper": 192.4699481934403,
+  "af_median": 0.794801546096154,
+  "tM_s": 0.0008511476840022683,
+  "fix_t": 0.008511476840022682,
+  "redshift_median": 0.5847048890920019
+ },
+ "GW190708_232457": {
+  "gwosc_name": "GW190708_232457",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190708_232457_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "L1"
+  ],
+  "ref_det": "L1",
+  "ra_maxL": 3.5509992641293096,
+  "dec_maxL": 1.1011865636180278,
+  "median_ref_time": 1246663515.3819494,
+  "peak_offset_s": 0.00048828125,
+  "trigtime_refdet": 1246663515.3824377,
+  "Mf_det_median": 34.47554256420622,
+  "Mf_det_90upper": 38.117742266817075,
+  "af_median": 0.6849155155765797,
+  "tM_s": 0.00016980897281501894,
+  "fix_t": 0.0016980897281501893,
+  "redshift_median": 0.185995432132123
+ },
+ "GW190727_060333": {
+  "gwosc_name": "GW190727_060333",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190727_060333_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 2.4923540316333614,
+  "dec_maxL": -1.209574228061728,
+  "median_ref_time": 1248242631.9798183,
+  "peak_offset_s": -0.001953125,
+  "trigtime_refdet": 1248242631.9778652,
+  "Mf_det_median": 98.8688575115463,
+  "Mf_det_90upper": 109.15663538817041,
+  "af_median": 0.7271433135698365,
+  "tM_s": 0.0004869776626767555,
+  "fix_t": 0.0048697766267675555,
+  "redshift_median": 0.5146093010818579
+ },
+ "GW190814": {
+  "gwosc_name": "GW190814_211039",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190814_211039_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 0.2238296037855676,
+  "dec_maxL": -0.4370344738846977,
+  "median_ref_time": 1249852257.0082388,
+  "peak_offset_s": -0.001708984375,
+  "trigtime_refdet": 1249852257.0065298,
+  "Mf_det_median": 26.951835912440917,
+  "Mf_det_90upper": 28.396856269663953,
+  "af_median": 0.2825934833823953,
+  "tM_s": 0.00013275102380904053,
+  "fix_t": 0.0013275102380904055,
+  "redshift_median": 0.05075547589897854
+ },
+ "GW190828_060333": {
+  "gwosc_name": "GW190828_063405",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190828_063405_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 2.455204903448724,
+  "dec_maxL": -0.41048044074495205,
+  "median_ref_time": 1251009263.7518308,
+  "peak_offset_s": 0.000244140625,
+  "trigtime_refdet": 1251009263.752075,
+  "Mf_det_median": 74.53734858655115,
+  "Mf_det_90upper": 79.93494254410179,
+  "af_median": 0.7425285205281953,
+  "tM_s": 0.0003671330357242392,
+  "fix_t": 0.0036713303572423923,
+  "redshift_median": 0.37537677197990704
+ },
+ "GW190910_112807": {
+  "gwosc_name": "GW190910_112807",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190910_112807_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "L1"
+  ],
+  "ref_det": "L1",
+  "ra_maxL": 1.5387980883139747,
+  "dec_maxL": 0.5370088660610903,
+  "median_ref_time": 1252150105.3168826,
+  "peak_offset_s": 0.002197265625,
+  "trigtime_refdet": 1252150105.3190799,
+  "Mf_det_median": 95.88981816511577,
+  "Mf_det_90upper": 103.55712989297531,
+  "af_median": 0.6848042453941972,
+  "tM_s": 0.0004723044313432448,
+  "fix_t": 0.004723044313432448,
+  "redshift_median": 0.3075880512562795
+ },
+ "GW190915_235702": {
+  "gwosc_name": "GW190915_235702",
+  "pe_file": "IGWN-GWTC2p1-v2-GW190915_235702_PEDataRelease_mixed_cosmo.h5",
+  "pe_group": "C01:IMRPhenomXPHM",
+  "detectors": [
+   "H1",
+   "L1"
+  ],
+  "ref_det": "H1",
+  "ra_maxL": 3.4143595371827615,
+  "dec_maxL": 0.34743243542044433,
+  "median_ref_time": 1252627040.685675,
+  "peak_offset_s": 0.00048828125,
+  "trigtime_refdet": 1252627040.6861632,
+  "Mf_det_median": 72.08605551672807,
+  "Mf_det_90upper": 78.09895321295093,
+  "af_median": 0.688375576996954,
+  "tM_s": 0.00035505921389880987,
+  "fix_t": 0.0035505921389880984,
+  "redshift_median": 0.329710774586157
+ }
+}

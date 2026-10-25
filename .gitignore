@@ -1,0 +1,34 @@
+# --- data & outputs (never commit; CI regenerates/downloads them) ---
+prep/
+logs/
+results/
+item9/
+power/
+archive*/
+runs/*/*/
+!runs/*/configs/
+runs/*/summary.*
+pe/*
+!pe/event_params.json
+*.h5
+*.hdf5
+*.gwf
+*.pkl
+*.npy
+*.npz
+*.tar
+*.tar.gz
+*.zip
+# --- environments ---
+.venv*/
+__pycache__/
+*.pyc
+# --- secrets / local config ---
+.env
+.env.*
+*.pem
+*.key
+*secret*
+*credential*
+*token*
+.netrc

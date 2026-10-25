@@ -1,0 +1,406 @@
+{
+ "https://gwosc.org/archive/data/O1_16KHZ/1126170624/H-H1_LOSC_16_V1-1126256640-4096.hdf5": {
+  "bytes": 517083069,
+  "sha256": "9dc0e536cefe9e1fb6f85d35a8eeec91eb34800204a45048770972a74ad6e4fc"
+ },
+ "https://gwosc.org/archive/data/O1_16KHZ/1126170624/H-H1_LOSC_16_V1-1126260736-4096.hdf5": {
+  "bytes": 517087157,
+  "sha256": "1ed94dec64bfc781df1af976d58aa784b7bc07b0f6d401123988407fe5d16854"
+ },
+ "https://gwosc.org/archive/data/O1_16KHZ/1126170624/L-L1_LOSC_16_V1-1126256640-4096.hdf5": {
+  "bytes": 474732437,
+  "sha256": "0ed720c98ba376c42275474d6c61a4c9d857047c46cb2bf4eb432eee5c374991"
+ },
+ "https://gwosc.org/archive/data/O1_16KHZ/1126170624/L-L1_LOSC_16_V1-1126260736-4096.hdf5": {
+  "bytes": 483728491,
+  "sha256": "3c72f2f5fdcd4816aa25269b433f49213a6592c5e830195b173f61fc24b8c86b"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1167065088/H-H1_GWOSC_O2_16KHZ_R1-1167556608-4096.hdf5": {
+  "bytes": 516406971,
+  "sha256": "5140e6b81059d78fb73b6d5c4a9c40707d680d989c3e0da9113a334c254d1422"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1167065088/H-H1_GWOSC_O2_16KHZ_R1-1167560704-4096.hdf5": {
+  "bytes": 516419841,
+  "sha256": "ab7cee9a7fd6b40f3e8e31de8b1acff95911578fa26b5911a65b1ad9171317e8"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1167065088/L-L1_GWOSC_O2_16KHZ_R1-1167556608-4096.hdf5": {
+  "bytes": 496758739,
+  "sha256": "bde7c716b00c8d4ad8429214d9cf032683c49a3c960c0e3f2f8a5b42132bc57a"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1167065088/L-L1_GWOSC_O2_16KHZ_R1-1167560704-4096.hdf5": {
+  "bytes": 495915518,
+  "sha256": "375b9ac5a4bc15045f05c9b84ac27bc91409fbb0571aada2113e25ba7a95d843"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1180696576/L-L1_GWOSC_O2_16KHZ_R1-1180917760-4096.hdf5": {
+  "bytes": 515528296,
+  "sha256": "5d8138fad9864ffe48ab44cf9b7c5d9263a92fcfd54d3f8a89ba3375c66e1441"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1180696576/L-L1_GWOSC_O2_16KHZ_R1-1180921856-4096.hdf5": {
+  "bytes": 515489726,
+  "sha256": "8b2e2da2661b1d0a9c7d62ed13ba960a00f3c2d917bbdf235c03c9ad4bc662f4"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1184890880/H-H1_GWOSC_O2_16KHZ_R1-1185386496-4096.hdf5": {
+  "bytes": 517573402,
+  "sha256": "5c5474f2c11f55b2f21ad55388bbaa0190ee15e899dd081565d71267f3cdcde4"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1184890880/H-H1_GWOSC_O2_16KHZ_R1-1185390592-4096.hdf5": {
+  "bytes": 517555369,
+  "sha256": "85bdc1838d89db9c2bfb54c4d31eabacb7ea6dc660ae2218d1c3a50b054fabcc"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1184890880/L-L1_GWOSC_O2_16KHZ_R1-1185386496-4096.hdf5": {
+  "bytes": 516822909,
+  "sha256": "0ef724776db1a4bccda53aa5f96e07994ddee927ca0f03fe06b500d08ebc75d5"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1184890880/L-L1_GWOSC_O2_16KHZ_R1-1185390592-4096.hdf5": {
+  "bytes": 516741306,
+  "sha256": "536db1bdf53856f50a20b0ae6a8b7c2ccb934917729603fc4125fc10770b658c"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1186988032/H-H1_GWOSC_O2_16KHZ_R1-1187053568-4096.hdf5": {
+  "bytes": 515252928,
+  "sha256": "d8700be6e35be512f2fbc0b3c4130cc5395ca4a898854d38cbce66d09ce90a88"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1186988032/H-H1_GWOSC_O2_16KHZ_R1-1187057664-4096.hdf5": {
+  "bytes": 515286890,
+  "sha256": "3ec4e78e86432a9e4421f2c13b0d3b3dfabac2b3e46e6309a3297216fc68b63b"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1186988032/H-H1_GWOSC_O2_16KHZ_R1-1187524608-4096.hdf5": {
+  "bytes": 515622461,
+  "sha256": "a7fdcf667b50bf52c405b69f8fd8a160c956d36d7c809f0d6de362a47ea1763d"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1186988032/H-H1_GWOSC_O2_16KHZ_R1-1187528704-4096.hdf5": {
+  "bytes": 515567019,
+  "sha256": "4d111fa738af9ed0b09d2735d149b112eaff99eda7352f425d7b47df9ba24e55"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1186988032/L-L1_GWOSC_O2_16KHZ_R1-1187053568-4096.hdf5": {
+  "bytes": 484734674,
+  "sha256": "433f2d82a3b968b19512751f6850d2e158179b6655d6a13c694710109f14b9bb"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1186988032/L-L1_GWOSC_O2_16KHZ_R1-1187057664-4096.hdf5": {
+  "bytes": 514328197,
+  "sha256": "17c74a646c00a0727fd11d42e246c29959a7f96357a879353ba5f5c08c31d724"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1186988032/L-L1_GWOSC_O2_16KHZ_R1-1187524608-4096.hdf5": {
+  "bytes": 516763527,
+  "sha256": "0051926591319b034a5586f1e328ba4921311aa9d5756beac804f87c6a05b0c7"
+ },
+ "https://gwosc.org/archive/data/O2_16KHZ_R1/1186988032/L-L1_GWOSC_O2_16KHZ_R1-1187528704-4096.hdf5": {
+  "bytes": 516623496,
+  "sha256": "a647e3e7166f75460fd6f1bce31b139a97db412cfff1c6cd5a9ac35935ece509"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1238368256/H-H1_GWOSC_O3a_16KHZ_R1-1238777856-4096.hdf5": {
+  "bytes": 515595278,
+  "sha256": "8bf40d3550585aa444dd3debb5f8a30222b14195debc0313cd94e4869b6d1715"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1238368256/H-H1_GWOSC_O3a_16KHZ_R1-1238781952-4096.hdf5": {
+  "bytes": 409161310,
+  "sha256": "154356f605e8d96e6fa7774fc2c180c8a67fc0be8c115ad516ed274305e4fc2a"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1238368256/L-L1_GWOSC_O3a_16KHZ_R1-1238777856-4096.hdf5": {
+  "bytes": 516103356,
+  "sha256": "d3f56761c3852254967dd77fb29fe33f80741295c245c3ceb8f5a7fcf4bdf19b"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1238368256/L-L1_GWOSC_O3a_16KHZ_R1-1238781952-4096.hdf5": {
+  "bytes": 516124289,
+  "sha256": "eb021f711810be41345c9c829887141e5d7e3e14983e0aff351b04638d5b0c08"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/H-H1_GWOSC_O3a_16KHZ_R1-1241714688-4096.hdf5": {
+  "bytes": 516670723,
+  "sha256": "c9ac8d06d066fc2972bf80c193b95e3130cb102a6e8f73d6a5e7d85cf4e1b7d6"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/H-H1_GWOSC_O3a_16KHZ_R1-1241718784-4096.hdf5": {
+  "bytes": 516559204,
+  "sha256": "bd731efe1ea7299cf45e6586673d2377e580d9eb2289b1b344b21af87f6ade69"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/H-H1_GWOSC_O3a_16KHZ_R1-1242312704-4096.hdf5": {
+  "bytes": 516990455,
+  "sha256": "d3b60bf3de46281c7c979bcc6c6d5c68a65ce945cee73eeb81fa7437eb31054f"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/H-H1_GWOSC_O3a_16KHZ_R1-1242316800-4096.hdf5": {
+  "bytes": 516826015,
+  "sha256": "07751d37761d3e4b6210f879e3442d3218927392996b4bc590cac1c88d77d99a"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/H-H1_GWOSC_O3a_16KHZ_R1-1242439680-4096.hdf5": {
+  "bytes": 516481411,
+  "sha256": "00fc21d27bbdcd5b121da19757bbe7dd854516e0ff267da2c7b71a9789b76326"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/H-H1_GWOSC_O3a_16KHZ_R1-1242443776-4096.hdf5": {
+  "bytes": 516390736,
+  "sha256": "4e3d9b594f2492f552820382dd14796ee500f768eeaa88b2b5201e065ad33be1"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/H-H1_GWOSC_O3a_16KHZ_R1-1242456064-4096.hdf5": {
+  "bytes": 516437206,
+  "sha256": "d4391b10975af845c21edc73eeec9aedb12a55982f7aea57482b866953107af1"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/H-H1_GWOSC_O3a_16KHZ_R1-1242460160-4096.hdf5": {
+  "bytes": 516387639,
+  "sha256": "d1409dfe75e88a7927e038a70d9b2908fbbe06d534462a10e5cad99ca9c41edc"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/L-L1_GWOSC_O3a_16KHZ_R1-1241714688-4096.hdf5": {
+  "bytes": 516995821,
+  "sha256": "7d602d00b9aa7afa9234a6f1c09cf8a8196e9af3f3aa2134574acc997cc35d43"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/L-L1_GWOSC_O3a_16KHZ_R1-1241718784-4096.hdf5": {
+  "bytes": 516876155,
+  "sha256": "87a7e8b49fa6f4413b64b5fa0e3e98c921b59518bc43a5f121720d6fe896d23c"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/L-L1_GWOSC_O3a_16KHZ_R1-1242439680-4096.hdf5": {
+  "bytes": 516786501,
+  "sha256": "58dd29a6199d265a509f64c317cd06fb491e2d485fd6f75870000c718cee0350"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/L-L1_GWOSC_O3a_16KHZ_R1-1242443776-4096.hdf5": {
+  "bytes": 516367104,
+  "sha256": "de8c576d70af8cfcc7a5112c45e35330975ef0bf7ef019550834ea86b2230751"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/L-L1_GWOSC_O3a_16KHZ_R1-1242456064-4096.hdf5": {
+  "bytes": 516764365,
+  "sha256": "b5fab93b79ad18b31c324388fcdbdbc2d76dae02ebd15549cdb32124fb49d78f"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1241513984/L-L1_GWOSC_O3a_16KHZ_R1-1242460160-4096.hdf5": {
+  "bytes": 516554918,
+  "sha256": "dbead424faddb89af678e94ae0881b021907f2c69ac0c0adfce539994c1af677"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1242562560/H-H1_GWOSC_O3a_16KHZ_R1-1243529216-4096.hdf5": {
+  "bytes": 516644781,
+  "sha256": "93052d60bac47ef8b43c3e3e171414e14fd4f48fcac7cbf63981af5b990d7e3a"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1242562560/H-H1_GWOSC_O3a_16KHZ_R1-1243533312-4096.hdf5": {
+  "bytes": 516617523,
+  "sha256": "dce0af1f3df548271241ee4e916422faa187d1ced7a26d0b8a15a33df1885eba"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1242562560/L-L1_GWOSC_O3a_16KHZ_R1-1243529216-4096.hdf5": {
+  "bytes": 518773574,
+  "sha256": "8d5cd21c625f8790f3f470e1b55f7d41f1f3c669fb1b242abd942d9135e4a2ce"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1242562560/L-L1_GWOSC_O3a_16KHZ_R1-1243533312-4096.hdf5": {
+  "bytes": 375308659,
+  "sha256": "7eedded008bea4542d386763981b2e5edb6c4701ef2d5bd3c76bd889133c5be2"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1245708288/H-H1_GWOSC_O3a_16KHZ_R1-1246482432-4096.hdf5": {
+  "bytes": 515872458,
+  "sha256": "a1ff372e18deb19ae2fbdb5501792620168c1967ce8acce976caa78c7e7403ed"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1245708288/H-H1_GWOSC_O3a_16KHZ_R1-1246486528-4096.hdf5": {
+  "bytes": 515835423,
+  "sha256": "91955eb91b36f27fa31dde34dafac5e6f332dafb8fc3077ee20b15bc5666a0c2"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1245708288/L-L1_GWOSC_O3a_16KHZ_R1-1245949952-4096.hdf5": {
+  "bytes": 516901600,
+  "sha256": "772313eb4c8a54f45ca3934d05a1cb29b8ba878211aea69d48ac0a16c717298e"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1245708288/L-L1_GWOSC_O3a_16KHZ_R1-1245954048-4096.hdf5": {
+  "bytes": 516827874,
+  "sha256": "d78bc596651a9bda201446761fc1a20db6f13595f7e5a365223b75ae439ee1d1"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1245708288/L-L1_GWOSC_O3a_16KHZ_R1-1246482432-4096.hdf5": {
+  "bytes": 518855427,
+  "sha256": "9af087431fa3898ec39d46c582109fb4a48fd0b4040b7da6e90184201f29089b"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1245708288/L-L1_GWOSC_O3a_16KHZ_R1-1246486528-4096.hdf5": {
+  "bytes": 518829495,
+  "sha256": "5f0e2b0425592c525a96d994d2c4ae7c6ba288a8eb9ed140811a1a62121bb3b3"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1245708288/L-L1_GWOSC_O3a_16KHZ_R1-1246658560-4096.hdf5": {
+  "bytes": 517446697,
+  "sha256": "764208811f5fdf27fc8cee01f2723c8705765f3aa2712fb04a4a5215cccf7b55"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1245708288/L-L1_GWOSC_O3a_16KHZ_R1-1246662656-4096.hdf5": {
+  "bytes": 517649760,
+  "sha256": "bdaffd88288daecb3db773765d482f8117df64172d0f0885fefacc2f046f10fd"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1247805440/H-H1_GWOSC_O3a_16KHZ_R1-1248239616-4096.hdf5": {
+  "bytes": 517698292,
+  "sha256": "031917ea30f700f6697aba8f8abfc003b31e530cb5c7c49a0c8d1111364e2464"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1247805440/H-H1_GWOSC_O3a_16KHZ_R1-1248243712-4096.hdf5": {
+  "bytes": 517928156,
+  "sha256": "37123b6bb36d1c7d9c437b271d9d5b96ceba5cd34c1ca9b8382ba3e158b2da84"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1247805440/L-L1_GWOSC_O3a_16KHZ_R1-1248239616-4096.hdf5": {
+  "bytes": 516983109,
+  "sha256": "09477842eabe1ceb87f205240e2d958b4206ade2c6d0269ec21c42386c6e68ee"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1247805440/L-L1_GWOSC_O3a_16KHZ_R1-1248243712-4096.hdf5": {
+  "bytes": 516903441,
+  "sha256": "d59ca06cd3ea3265ce351d9aad84de3fcf64f7fa8ebefc3bca871dfc6999f43c"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1248854016/H-H1_GWOSC_O3a_16KHZ_R1-1249849344-4096.hdf5": {
+  "bytes": 75593539,
+  "sha256": "f090c83fecb98aa0df34a956ffa47756bfe35456ef4c6438f26b72e1ddcb4d13"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1248854016/H-H1_GWOSC_O3a_16KHZ_R1-1249853440-4096.hdf5": {
+  "bytes": 159442756,
+  "sha256": "327983a627d70a3a5f4aa427fb6458b452865380db129e9543dbbd59fe070f58"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1248854016/L-L1_GWOSC_O3a_16KHZ_R1-1249849344-4096.hdf5": {
+  "bytes": 321663252,
+  "sha256": "d128c8ee1182b6da80934ddc60ed0eff7bc32e56abaa38bbe12478aba9744c77"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1248854016/L-L1_GWOSC_O3a_16KHZ_R1-1249853440-4096.hdf5": {
+  "bytes": 74814037,
+  "sha256": "af58b7811e15a6270b55d3c8c3c96ac6bfbe6bc0b554d06f33efc42a4cd9b26d"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1250951168/H-H1_GWOSC_O3a_16KHZ_R1-1251004416-4096.hdf5": {
+  "bytes": 515835392,
+  "sha256": "c443e7b31a888133b556a715829ee2fd9d765ca21c82372eab2272196d9b1928"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1250951168/H-H1_GWOSC_O3a_16KHZ_R1-1251008512-4096.hdf5": {
+  "bytes": 515973962,
+  "sha256": "0e5d0355f1c9372f5b28cac22d84566a179d5e7cb88e70f917fea791ecd3eca8"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1250951168/L-L1_GWOSC_O3a_16KHZ_R1-1251004416-4096.hdf5": {
+  "bytes": 516735630,
+  "sha256": "e4d053eb4f0d55b065753304ce4951af61cec8ebe71936c0da9a2bbf67785938"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1250951168/L-L1_GWOSC_O3a_16KHZ_R1-1251008512-4096.hdf5": {
+  "bytes": 516712792,
+  "sha256": "0c51e9683503c65a0eefbfc44300e858fd741cb3d69dd50d37ba38197f3aedbc"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1251999744/H-H1_GWOSC_O3a_16KHZ_R1-1252622336-4096.hdf5": {
+  "bytes": 516830015,
+  "sha256": "e2e89fcfc0ca3a94a61aff91731909482f3b73c4c84ea00dcc46267378563b50"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1251999744/H-H1_GWOSC_O3a_16KHZ_R1-1252626432-4096.hdf5": {
+  "bytes": 516789169,
+  "sha256": "b1c8ddecb8d649a4438dd1aa4a6007dc98e990a90eac3182b5795bd57a5a33a8"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1251999744/L-L1_GWOSC_O3a_16KHZ_R1-1252147200-4096.hdf5": {
+  "bytes": 516675730,
+  "sha256": "43a4cb370a282b937aebaffa573519befe2dcb07f5c406245b3e71b4543c80c2"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1251999744/L-L1_GWOSC_O3a_16KHZ_R1-1252151296-4096.hdf5": {
+  "bytes": 507334882,
+  "sha256": "4466f6295d8523556ea43eacb4019c91ac4051bf5ac34aa5285e360caa66c8da"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1251999744/L-L1_GWOSC_O3a_16KHZ_R1-1252622336-4096.hdf5": {
+  "bytes": 516340742,
+  "sha256": "fd757c4e2db2d1670eee63a62c0ad488fa57f9ce6270d8f34062e3b9fd582f34"
+ },
+ "https://gwosc.org/archive/data/O3a_16KHZ_R1/1251999744/L-L1_GWOSC_O3a_16KHZ_R1-1252626432-4096.hdf5": {
+  "bytes": 516414884,
+  "sha256": "7eb954d25c33cbf063132ec0b1d4f8253ca7b7240024494919a190d8a3b99749"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_16KHZ_R1-1180920447-4096.hdf5": {
+  "bytes": 515799351,
+  "sha256": "69e7e0147b517cb29d591a2ac40a62128774474f0f9791cad898a62b5a1ec004"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_16KHZ_R1-1180920447-4096.hdf5": {
+  "bytes": 515495207,
+  "sha256": "a2311d94ba407a68051bc8bdc8f4962c8df3aa377ecc3369f6a5fdc2c779de2c"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190408_181802/v2/H-H1_GWOSC_16KHZ_R1-1238780653-4096.hdf5": {
+  "bytes": 515649825,
+  "sha256": "031b0398fc3c932527b7e186c9d4f6afacf78c10c0a076ee3afa500f49c6f512"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190408_181802/v2/L-L1_GWOSC_16KHZ_R1-1238780653-4096.hdf5": {
+  "bytes": 516139889,
+  "sha256": "76ffafe34182a66eac570b44a4ea790fcd51cd4c21a1b03d5943ad86a03d1aa7"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190512_180714/v2/H-H1_GWOSC_16KHZ_R1-1241717605-4096.hdf5": {
+  "bytes": 516599055,
+  "sha256": "16bee689e922452baac68b705dff7326ccb7aef93e1baae89995c186a8bed4a4"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190512_180714/v2/L-L1_GWOSC_16KHZ_R1-1241717605-4096.hdf5": {
+  "bytes": 516843337,
+  "sha256": "394537381fcc05365ac0504243701f7b4691441fb35bd1e9997b71e4aaea854d"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190519_153544/v2/H-H1_GWOSC_16KHZ_R1-1242313315-4096.hdf5": {
+  "bytes": 516990136,
+  "sha256": "561f690ad0204714fe0eb6b4abde6c7a200f8ea6e5340ee83e29d1fafdcd0fc1"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190519_153544/v2/L-L1_GWOSC_16KHZ_R1-1242313315-4096.hdf5": {
+  "bytes": 377264873,
+  "sha256": "cd554f6e69f75d00b15cf6db84612ef82a1542bfe52d2acc8bb580e37cdc6323"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190521/v4/H-H1_GWOSC_16KHZ_R1-1242440920-4096.hdf5": {
+  "bytes": 516445134,
+  "sha256": "6682af3bf5f3ae2edf710fc2d6f34bf81e8e539a3e20c21015437d3c2c4f9781"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190521/v4/L-L1_GWOSC_16KHZ_R1-1242440920-4096.hdf5": {
+  "bytes": 516552719,
+  "sha256": "a55b208e791b0990af136ebae59209c03b9bc7351bb6b3c0ccbb30af8556cda9"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190521_074359/v2/H-H1_GWOSC_16KHZ_R1-1242457810-4096.hdf5": {
+  "bytes": 516422385,
+  "sha256": "13ba1ae04ab75e8819ec72489780f15ebb90592121ac0160200552a00136d116"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190521_074359/v2/L-L1_GWOSC_16KHZ_R1-1242457810-4096.hdf5": {
+  "bytes": 516634488,
+  "sha256": "343741616690c20899298e4baa811fc26d3d0dac3481aa858b8a8c047e5d2588"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190602_175927/v2/H-H1_GWOSC_16KHZ_R1-1243531537-4096.hdf5": {
+  "bytes": 516651880,
+  "sha256": "291a7fc2029d716d96fc33024d09582ea10a2cec08065edad2b724ef5c3c8118"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190602_175927/v2/L-L1_GWOSC_16KHZ_R1-1243531537-4096.hdf5": {
+  "bytes": 518702392,
+  "sha256": "0632bce087cf27c5122f73daa38cda8dd7e99833153edfd30584e01f1d5a9856"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190630_185205/v2/L-L1_GWOSC_16KHZ_R1-1245953896-4096.hdf5": {
+  "bytes": 516824430,
+  "sha256": "c41d00dc40c36b3be5c1b560542b54321746a09b72f18591f55d933d99dacbf5"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190706_222641/v2/H-H1_GWOSC_16KHZ_R1-1246485172-4096.hdf5": {
+  "bytes": 515799518,
+  "sha256": "f642fb57197a4fa6f73c019ee41c092cedf9fabdd2fe69ce4207e4c9569a7c6a"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190706_222641/v2/L-L1_GWOSC_16KHZ_R1-1246485172-4096.hdf5": {
+  "bytes": 518842566,
+  "sha256": "4b90b5f61bfff92f07df29a36e7a81dc5c7de4f95f21b26c2295e8737e6c291b"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190708_232457/v2/L-L1_GWOSC_16KHZ_R1-1246661468-4096.hdf5": {
+  "bytes": 517590516,
+  "sha256": "0002d758160a055278a8e61c883889c71529a40071db7c7d0ea9fd47a29f845f"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190727_060333/v2/H-H1_GWOSC_16KHZ_R1-1248240584-4096.hdf5": {
+  "bytes": 517715551,
+  "sha256": "4c28b5b6d6882e1ca2803bb2f57209f24634ed6987042d39735852af3b7b00b8"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190727_060333/v2/L-L1_GWOSC_16KHZ_R1-1248240584-4096.hdf5": {
+  "bytes": 516997694,
+  "sha256": "bc08256990acdfec684c2332d01936ba8b7a4a797abd9c2c732185e846927258"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190814/v3/H-H1_GWOSC_16KHZ_R1-1249850209-4096.hdf5": {
+  "bytes": 516719849,
+  "sha256": "eccfc1b2c3f6999f8134393180d9d0aef6ea5251553005a3b1524749731e88ae"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190814/v3/L-L1_GWOSC_16KHZ_R1-1249850209-4096.hdf5": {
+  "bytes": 393291442,
+  "sha256": "9c668deec2ae9871e4f882cd22ba433c5bf73a33732c36631047140e75d029a3"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190828_063405/v2/H-H1_GWOSC_16KHZ_R1-1251007216-4096.hdf5": {
+  "bytes": 515942565,
+  "sha256": "cf1e940482b8cba33c0f9dbbca943e705bc224b8334b70f1df67c2793a804206"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190828_063405/v2/L-L1_GWOSC_16KHZ_R1-1251007216-4096.hdf5": {
+  "bytes": 516709707,
+  "sha256": "4e12381c28363fb5119066dc3c919036fc91cce71f9e21b033ab2b08f7e71911"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190910_112807/v2/L-L1_GWOSC_16KHZ_R1-1252148058-4096.hdf5": {
+  "bytes": 516644511,
+  "sha256": "71c5af634f0154cbfe5e78b8095476f3dd4a65e884fc4b70fd4407b512a16239"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190915_235702/v2/H-H1_GWOSC_16KHZ_R1-1252624993-4096.hdf5": {
+  "bytes": 516829124,
+  "sha256": "4ced3069e308cadf7c33e2d4c903adc7cee8448cf4dd62f16e35d8d021a88ca7"
+ },
+ "https://gwosc.org/eventapi/json/GWTC-2.1-confident/GW190915_235702/v2/L-L1_GWOSC_16KHZ_R1-1252624993-4096.hdf5": {
+  "bytes": 516322249,
+  "sha256": "98f5d7c7425c0bbd0ef3f904bc232de317d873f923610716e408e6998309a42b"
+ },
+ "https://gwosc.org/eventapi/json/O1_O2-Preliminary/GW150914/v2/H-H1_LOSC_16_V2-1126257414-4096.hdf5": {
+  "bytes": 517084715,
+  "sha256": "5b00199d0df4e0c5765d0ac3a69386424a8aba058220b64009dbd5aade4918e9"
+ },
+ "https://gwosc.org/eventapi/json/O1_O2-Preliminary/GW150914/v2/L-L1_LOSC_16_V2-1126257414-4096.hdf5": {
+  "bytes": 497811867,
+  "sha256": "dd58b7e3e180be921a87d3f1ef3695a033286248a131b79ac4cb6664e38b2c15"
+ },
+ "https://gwosc.org/eventapi/json/O1_O2-Preliminary/GW170104/v1/H-H1_LOSC_16_V1-1167557888-4096.hdf5": {
+  "bytes": 516393515,
+  "sha256": "d83a62a8c30440cc18f5f03ca2cc035fe548f5d0e1c1db7a6535be2bce05b979"
+ },
+ "https://gwosc.org/eventapi/json/O1_O2-Preliminary/GW170104/v1/L-L1_LOSC_16_V1-1167557888-4096.hdf5": {
+  "bytes": 496390187,
+  "sha256": "20be13beb2e36ef3f7c536c30ea46242b304cfaf739bd1c6604308d33f5159cc"
+ }
+}

@@ -1,0 +1,262 @@
+# L9 pyRing nested-sampling batches on GitHub-hosted runners (low-memory short-data pipeline, 1 thread per run).
+# Dispatch (see README):  gh workflow run l9-batch.yml -f preset=pilot
+# Results: result-<tag>-<job> per job, partial-<tag>-<job> for checkpointed runs, l9-<tag>-merged (+ summary.csv).
+# Every run directory carries provenance.json (seed, config sha256, GWOSC URLs + sha256, prep sha256 vs box,
+# commit, runner image, package versions, wall time, exit code, resume history).
+name: L9 batch
+on:
+  workflow_dispatch:
+    inputs:
+      preset:
+        description: "pilot = rerun box n2048 GW150914_GR, GW170104_GR, GW190408_181802_GR (exact configs); pilot-ckpt = GW190408_181802_GR with a forced checkpoint (resume it with resume_run_id); smoke = runs/ci_smoke256; custom = tag/filter below"
+        type: choice
+        options: [pilot, pilot-ckpt, smoke, custom]
+        default: pilot
+      tag:
+        description: "custom only: batch = runs/<tag>/configs"
+        required: false
+        default: n2048
+      filter:
+        description: "custom only: regex on config file names, e.g. '^GW150914_'"
+        required: false
+        default: ""
+      runs_per_job:
+        description: "Runs per 4-vCPU runner (each run is single-threaded)"
+        required: true
+        default: "4"
+      max_parallel:
+        description: "Max concurrent run jobs (GitHub Free: 20 concurrent jobs per account)"
+        required: true
+        default: "20"
+      run_limit_min:
+        description: "Sampling budget per job (min). Then samplers get SIGTERM, cpnest checkpoints, partial runs are uploaded"
+        required: true
+        default: "330"
+      force_checkpoint_regex:
+        description: "custom only: regex on run names to SIGTERM (checkpoint) after force_checkpoint_min"
+        required: false
+        default: ""
+      force_checkpoint_min:
+        description: "Minutes before a forced checkpoint (pilot-ckpt / force_checkpoint_regex)"
+        required: false
+        default: "20"
+      runner:
+        description: "Runner label for prep/run jobs: ubuntu-latest (GitHub-hosted; pilot/testing only, see README 'Usage policy') or a self-hosted label"
+        required: true
+        default: ubuntu-latest
+      resume_run_id:
+        description: "Workflow run id whose partial-<tag>-* artifacts (checkpointed runs) should be resumed"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: l9-${{ inputs.preset }}-${{ inputs.tag }}-${{ inputs.filter }}
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+      events: ${{ steps.p.outputs.events }}
+      n_jobs: ${{ steps.p.outputs.n_jobs }}
+      tag: ${{ steps.preset.outputs.tag }}
+      ckpt: ${{ steps.preset.outputs.ckpt }}
+    env:
+      PRESET: ${{ inputs.preset }}
+      IN_TAG: ${{ inputs.tag }}
+      IN_FILTER: ${{ inputs.filter }}
+      IN_CKPT: ${{ inputs.force_checkpoint_regex }}
+      RESUME: ${{ inputs.resume_run_id }}
+      RPJ: ${{ inputs.runs_per_job }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: preset
+        run: |
+          set -euo pipefail
+          case "$PRESET" in
+            pilot)      tag=n2048; filter='^(GW150914|GW170104|GW190408_181802)_GR\.ini$'; ckpt='' ;;
+            pilot-ckpt) tag=n2048; filter='^GW190408_181802_GR\.ini$'; ckpt='^GW190408_181802_GR$'
+                        [ -z "$RESUME" ] || ckpt='' ;;   # the resume dispatch runs to completion
+            smoke)      tag=ci_smoke256; filter=''; ckpt='' ;;
+            *)          tag="$IN_TAG"; filter="$IN_FILTER"; ckpt="$IN_CKPT" ;;
+          esac
+          [[ "$tag" =~ ^[A-Za-z0-9_.-]+$ ]] || { echo "bad tag"; exit 1; }
+          { echo "tag=$tag"; echo "filter=$filter"; echo "ckpt=$ckpt"; } | tee -a "$GITHUB_OUTPUT"
+      - id: p
+        run: python3 ci/plan.py "${{ steps.preset.outputs.tag }}" "$RPJ" "${{ steps.preset.outputs.filter }}"
+
+  prep:
+    # Per-event noise preprocessing = code/preprocess.py on runs/prepcfg/configs/<event>_GR.ini (public GWOSC strain,
+    # pyRing's own ACF estimator). ~5 GB peak -> one event per runner. Cached; passed on as prep-<event> artifacts.
+    needs: plan
+    runs-on: ${{ inputs.runner }}
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        event: ${{ fromJSON(needs.plan.outputs.events) }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: cache
+        uses: actions/cache@v4
+        with:
+          path: prep/${{ matrix.event }}
+          key: prep-v2-${{ matrix.event }}-${{ hashFiles(format('runs/prepcfg/configs/{0}_GR.ini', matrix.event), 'code/preprocess.py', 'requirements.lock.txt', 'ci/prep_provenance.py') }}
+      - if: steps.cache.outputs.cache-hit != 'true'
+        uses: ./.github/actions/setup-l9
+      - if: steps.cache.outputs.cache-hit != 'true'
+        env:
+          EV: ${{ matrix.event }}
+        run: |
+          set -euo pipefail
+          source .venv/bin/activate
+          export MPLBACKEND=Agg OMP_NUM_THREADS=1
+          s=$(date +%s)
+          python code/preprocess.py "runs/prepcfg/configs/${EV}_GR.ini"
+          echo "$EV prep wall_s=$(( $(date +%s)-s ))"
+          find "prep/$EV" -mindepth 1 -maxdepth 1 ! -name 'ACF_*.txt' ! -name 'strain64_*.txt' -exec rm -rf {} +
+          python ci/prep_provenance.py "$EV"
+      - run: ls -la prep/${{ matrix.event }} && sha256sum prep/${{ matrix.event }}/*.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prep-${{ matrix.event }}
+          path: prep/${{ matrix.event }}
+          retention-days: 7
+
+  run:
+    needs: [plan, prep]
+    runs-on: ${{ inputs.runner }}   # GitHub-hosted public repos: 4 vCPU / 16 GB
+    timeout-minutes: 355            # GitHub-hosted hard cap is 360
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJSON(inputs.max_parallel) }}
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    env:
+      TAG: ${{ needs.plan.outputs.tag }}
+      CKPT: ${{ needs.plan.outputs.ckpt }}
+      CKPT_MIN: ${{ inputs.force_checkpoint_min }}
+      LIMIT_MIN: ${{ inputs.run_limit_min }}
+      RESUME: ${{ inputs.resume_run_id }}
+      CONFIGS: ${{ matrix.configs }}
+      EVENTS: ${{ matrix.events }}
+      NPAR: ${{ matrix.n }}
+      L9_JOB_ID: ${{ matrix.id }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-l9
+      - name: Freeze environment
+        run: |
+          uv pip freeze --python .venv/bin/python > freeze.txt
+          echo "image: $ImageOS $ImageVersion"; .venv/bin/python -V; grep -iE '^(pyringgw|cpnest|lalsuite|numpy|scipy)==' freeze.txt
+      - name: Fetch preprocessed inputs
+        run: |
+          set -euo pipefail
+          for ev in $EVENTS; do gh run download "$GITHUB_RUN_ID" -R "$GITHUB_REPOSITORY" -n "prep-$ev" -D "prep/$ev"; done
+          ls -la prep/*
+      - name: Restore checkpointed runs
+        if: inputs.resume_run_id != ''
+        run: |
+          gh run download "$RESUME" -R "$GITHUB_REPOSITORY" -p "partial-$TAG-*" -D /tmp/prev || true
+          mkdir -p "logs/$TAG"
+          for c in $CONFIGS; do
+            r=${c%.ini}
+            for d in /tmp/prev/*/"$r"; do
+              [ -d "$d" ] || continue
+              cp -a "$d/runs/." runs/
+              cp -a "$d/logs/." logs/ 2>/dev/null || true
+              # keep the interrupted attempt's log; run_one.sh starts a fresh one
+              [ -f "logs/$TAG/$r.log" ] && mv "logs/$TAG/$r.log" "logs/$TAG/$r.attempt-$RESUME.log"
+              rm -f "logs/$TAG/$r.timeout"
+              echo "$RESUME" > "logs/$TAG/$r.resumed"
+              ls -la "runs/$TAG/$r/Nested_sampler/"; echo "resuming $r from run $RESUME"
+            done
+          done
+      - name: Sample (unmodified code/run_one.sh, matrix.n runs in parallel)
+        run: |
+          set -uo pipefail
+          mkdir -p "logs/$TAG"
+          # Only the real pyRing processes match 'bin/pyRing --config-file' (run_one.sh's wrapper calls plain 'pyRing').
+          # On SIGTERM cpnest writes nested_sampler_resume.pkl + sampler_*.pkl and exits 130.
+          term() { for r in "$@"; do [ -f "runs/$TAG/$r/Nested_sampler/Evidence.txt" ] && continue
+                     touch "logs/$TAG/$r.timeout"; pkill -TERM -f "bin/pyRing --config-file .*/configs/$r\.ini" || true; done; }
+          all=$(for c in $CONFIGS; do echo "${c%.ini}"; done)
+          ( sleep $(( LIMIT_MIN * 60 )); term $all ) & wd=$!
+          if [ -n "$CKPT" ]; then
+            sel=$(echo "$all" | grep -E "$CKPT" || true)
+            echo "forced checkpoint after ${CKPT_MIN} min for: $sel"
+            ( sleep $(( CKPT_MIN * 60 )); term $sel ) & wd2=$!
+          fi
+          printf '%s\n' $CONFIGS | xargs -P "$NPAR" -I{} bash code/run_one.sh "/workspace/qg-unification/l9-run/runs/$TAG/configs/{}"
+          kill $wd ${wd2:-} 2>/dev/null || true
+          for i in $(seq 1 120); do pgrep -f 'bin/pyRing --config-file' >/dev/null || break; sleep 5; done
+          for c in $CONFIGS; do r=${c%.ini}; echo "== $r"; tail -n 2 "logs/$TAG/$r.log"; done
+      - name: Provenance + split finished/checkpointed
+        if: always()
+        run: |
+          mkdir -p partial
+          for c in $CONFIGS; do
+            r=${c%.ini}
+            [ -d "runs/$TAG/$r" ] || continue
+            .venv/bin/python ci/provenance.py "runs/$TAG/configs/$c" freeze.txt || true
+            if [ ! -f "runs/$TAG/$r/Nested_sampler/Evidence.txt" ]; then
+              cp "runs/$TAG/$r/provenance.json" "logs/$TAG/$r.attempt-$GITHUB_RUN_ID.json" 2>/dev/null || true
+              mkdir -p "partial/$r/runs/$TAG" "partial/$r/logs/$TAG"
+              cp -a "runs/$TAG/$r" "partial/$r/runs/$TAG/"
+              cp -a "logs/$TAG/$r".* "partial/$r/logs/$TAG/" 2>/dev/null || true
+            fi
+          done
+          ls partial
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: result-${{ needs.plan.outputs.tag }}-${{ matrix.id }}
+          path: |
+            runs/${{ needs.plan.outputs.tag }}/*/
+            logs/${{ needs.plan.outputs.tag }}/
+            !runs/${{ needs.plan.outputs.tag }}/configs/
+            !runs/${{ needs.plan.outputs.tag }}/*/Nested_sampler/*.pkl
+          retention-days: 30
+          if-no-files-found: warn
+      - uses: actions/upload-artifact@v4
+        if: always() && hashFiles('partial/**') != ''
+        with:
+          name: partial-${{ needs.plan.outputs.tag }}-${{ matrix.id }}
+          path: partial/
+          retention-days: 30
+
+  collect:
+    needs: [plan, run]
+    if: always() && needs.plan.result == 'success'
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ needs.plan.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: result-${{ needs.plan.outputs.tag }}-*
+          merge-multiple: true
+          path: merged
+      - name: Merge + summary (combine.py is NOT run here)
+        run: |
+          set -uo pipefail
+          mkdir -p "runs/$TAG" logs
+          cp -a "merged/runs/$TAG/." "runs/$TAG/" 2>/dev/null || true
+          cp -a merged/logs/. logs/ 2>/dev/null || true
+          python3 ci/collect.py "$TAG" | tee -a "$GITHUB_STEP_SUMMARY"; echo "collect_exit=${PIPESTATUS[0]}" >> "$GITHUB_ENV"
+          python3 ci/compare_reference.py "$TAG" | tee -a "$GITHUB_STEP_SUMMARY" || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: l9-${{ needs.plan.outputs.tag }}-merged
+          path: |
+            runs/${{ needs.plan.outputs.tag }}/
+            logs/${{ needs.plan.outputs.tag }}/
+          retention-days: 30
+      - run: exit ${collect_exit:-1}

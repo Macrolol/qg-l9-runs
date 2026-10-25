@@ -1,0 +1,53 @@
+{
+ "source": "QG team box run (tag n2048), copied read-only on 2026-10-25",
+ "box_cpu": "Intel(R) Xeon(R) Processor",
+ "box_ncpu": 8,
+ "note": "GW150914_GR and GW170104_GR have run-type=full: sampling finished (Evidence.txt written), then pyRing post-processing was OOM-killed on the box (exit=247, ~6 GB peak). GW190408_181802_GR is sampling-only. Compare lnZ/lnB within ~3*sqrt(H/nlive); bitwise identity is not expected across CPUs.",
+ "runs": {
+  "GW150914_GR": {
+   "config_sha256": "4940d14d2518180bd61ab0d7c17b479cde14c5dd52a0652d35224d3940bb6b73",
+   "lnZ_noise": 38753.11669985916,
+   "lnZ_signal": 38768.31894044798,
+   "lnB": 15.202240588820132,
+   "SNR": 7.318310604293331,
+   "cpnest_information": 8.84,
+   "lnZ_sigma_est": 0.0657,
+   "exit_code": 247,
+   "wall_s": 3100,
+   "maxrss_children_MB": 6408.546875,
+   "posterior_rows": 8282,
+   "Evidence_sha256": "7f766100a813d5608957bb6ff16f6687932621eac0d47b709c6316af2bb73ed2",
+   "posterior_sha256": "446d85c7dc318ec77bd3382c39d6c944b22d5251dc9d8d36aae5c401a0f92ee6"
+  },
+  "GW170104_GR": {
+   "config_sha256": "6f5f39b16858f95ef4982fed62a6804765ea78fe8c48601cecb96cf571ff418c",
+   "lnZ_noise": 38866.37022261732,
+   "lnZ_signal": 38874.12805453094,
+   "lnB": 7.757831913622795,
+   "SNR": 6.277591419890989,
+   "cpnest_information": 8.81,
+   "lnZ_sigma_est": 0.0656,
+   "exit_code": 247,
+   "wall_s": 4127,
+   "maxrss_children_MB": 5895.34765625,
+   "posterior_rows": 9164,
+   "Evidence_sha256": "80814abe377eb5af21febe48b9b188994d1af7a04c163d9debd84c00b5db9dff",
+   "posterior_sha256": "9151fb4cfc3718eafae1a3bbd2e2d382a2c8fb7766efe15a336b9a5406ff93af"
+  },
+  "GW190408_181802_GR": {
+   "config_sha256": "f3fb9a68392caf5874af77dc04206a48d6b7cc9a9d5e5237f888cd8858e33461",
+   "lnZ_noise": 39451.43272057666,
+   "lnZ_signal": 39451.73283339049,
+   "lnB": 0.3001128138275817,
+   "SNR": 4.859821681677066,
+   "cpnest_information": 8.16,
+   "lnZ_sigma_est": 0.0631,
+   "exit_code": 0,
+   "wall_s": 5085,
+   "maxrss_children_MB": 420.12890625,
+   "posterior_rows": 8700,
+   "Evidence_sha256": "36250c3241839f0df8700322e6b4b5c905d688837ea435e4b9504ddd89d51773",
+   "posterior_sha256": "4b53c5277c3efa30c4a43d2f074e688956d1004668c6348cb9310d7f4a57200c"
+  }
+ }
+}
