@@ -10,7 +10,12 @@ id=${1:?run id}; repo=${2:-Macrolol/qg-l9-runs}; which=${3:-merged}
 new=/workspace/projects/quantum-gravity/shared/l9-staging; old=/workspace/qg-l9-staging
 if [ -z "${L9_STAGING:-}" ]; then if [ -d "$new" ] || [ ! -e "$old" ]; then L9_STAGING=$new; else L9_STAGING=$old; fi; fi
 base=$L9_STAGING; dest="$base/$id"
-case "$(realpath -m "$dest")" in /workspace/qg-unification/*) echo "refusing to write into the QG working tree" >&2; exit 2;; esac
+rd=$(realpath -m "$dest")
+for qg in /workspace/qg-unification /workspace/projects/quantum-gravity/shared/qg-unification; do
+  for p in "$qg" "$(realpath -m "$qg")"; do
+    case "$rd/" in "$p"/*) echo "refusing to write into the QG working tree ($p)" >&2; exit 2;; esac
+  done
+done
 [ -e "$dest" ] && { echo "$dest exists; not overwriting" >&2; exit 3; }
 mkdir -p "$dest"
 gh run view "$id" -R "$repo" --json databaseId,displayTitle,headSha,status,conclusion,createdAt,updatedAt,url,jobs > "$dest/run.json"
