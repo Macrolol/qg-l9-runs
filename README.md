@@ -80,7 +80,7 @@ The full `Nested_sampler/` (`cpnest.log`, `Evidence.txt`, `posterior.dat`, ...) 
 ## Fetch results
 ```bash
 gh run list --workflow l9-batch.yml
-ci/pull_results.sh <run-id>                  # l9-<tag>-merged -> /workspace/qg-l9-staging/<run-id>/ + MANIFEST.sha256
+ci/pull_results.sh <run-id>                  # l9-<tag>-merged -> /workspace/projects/quantum-gravity/shared/l9-staging/<run-id>/ + MANIFEST.sha256
 ci/pull_results.sh <run-id> Macrolol/qg-l9-runs all   # every artifact (prep, per-job results, checkpoints)
 ```
 The pull script never writes into `/workspace/qg-unification/`. It refuses an existing destination and makes the

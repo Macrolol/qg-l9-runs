@@ -4,10 +4,12 @@
 #   merged  : l9-<tag>-merged only (default; finished runs + summary.csv)
 #   results : result-* per-job artifacts
 #   all     : every artifact incl. prep-* and partial-* (checkpoints)
-# Output: ${L9_STAGING:-/workspace/qg-l9-staging}/<run-id>/{artifacts...,MANIFEST.sha256,run.json}
+# Output: $L9_STAGING (default /workspace/projects/quantum-gravity/shared/l9-staging, falling back to legacy /workspace/qg-l9-staging)/<run-id>/{artifacts...,MANIFEST.sha256,run.json}
 set -euo pipefail
 id=${1:?run id}; repo=${2:-Macrolol/qg-l9-runs}; which=${3:-merged}
-base=${L9_STAGING:-/workspace/qg-l9-staging}; dest="$base/$id"
+new=/workspace/projects/quantum-gravity/shared/l9-staging; old=/workspace/qg-l9-staging
+if [ -z "${L9_STAGING:-}" ]; then if [ -d "$new" ] || [ ! -e "$old" ]; then L9_STAGING=$new; else L9_STAGING=$old; fi; fi
+base=$L9_STAGING; dest="$base/$id"
 case "$(realpath -m "$dest")" in /workspace/qg-unification/*) echo "refusing to write into the QG working tree" >&2; exit 2;; esac
 [ -e "$dest" ] && { echo "$dest exists; not overwriting" >&2; exit 3; }
 mkdir -p "$dest"
